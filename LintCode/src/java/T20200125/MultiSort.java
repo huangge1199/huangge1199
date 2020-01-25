@@ -1,3 +1,5 @@
+package T20200125;
+
 /**
  * @Author: hyy
  * @Date: 2020-01-25 22:40
@@ -13,14 +15,14 @@ public class MultiSort {
         for (int i = 0;i<array.length;i++){
             for (int j=i+1;j<array.length;j++){
                 if(array[i][1]<array[j][1]){
-                    int temp = array[i][1];
-                    array[i][1] = array[j][1];
-                    array[j][1] = temp;
+                    int[] temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
                 }else if(array[i][1]==array[j][1]){
                     if(array[i][0]>array[j][0]){
-                        int temp = array[i][1];
-                        array[i][1] = array[j][1];
-                        array[j][1] = temp;
+                        int[] temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
                     }
                 }
             }
